@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TikTok Callback</title>
+</head>
+<body>
+  <h1>Authorization Complete</h1>
+  <p>You can close this page.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    if (code) {
+      document.body.innerHTML += "<p>Authorization code received.</p>";
+      console.log("TikTok code:", code);
+    }
+  </script>
+</body>
+</html>
